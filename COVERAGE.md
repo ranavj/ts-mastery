@@ -15,8 +15,8 @@
 |---|---|---|---|
 | Generics (constraints, inference, defaults) | 1 | `redux/src/core` | ✅ |
 | Function Overloads | 1 | `redux/src/core` | ⬜ |
-| Discriminated Unions + exhaustiveness (`never`) | 2 | `redux/src/core` | ⬜ |
-| Mapped Types, `keyof` | 2 | `redux/src/core` (combineReducers) | ⬜ |
+| Discriminated Unions + exhaustiveness (`never`) | 2 | `redux/src/core` | 🟡 |
+| Mapped Types, `keyof` | 2 | `redux/src/core` (combineReducers) | ✅ |
 | Higher-order generic functions | 3 | `redux/src/core` (middleware) | ⬜ |
 | Function composition types | 3 | `redux/src/core` (compose) | ⬜ |
 | Generic composition / variance | 4 | `redux/src/core` (enhancers) | ⬜ |
@@ -54,7 +54,7 @@
 | Singleton | 7 | `query/src/core` (QueryClient) | ⬜ |
 | Facade | 7 | `query/src/core` (QueryClient hides QueryCache) | ⬜ |
 | Strategy Pattern (retry backoff) | 9 | `query/src/core` | ⬜ |
-| Command-ish (actions as data) | 2 | `redux/src/core` | ⬜ |
+| Command-ish (actions as data) | 2 | `redux/src/core` | ✅ |
 
 ## 4. System Design Concepts
 
@@ -73,8 +73,8 @@
 
 | Section | Total | Done |
 |---|---|---|
-| TypeScript Topics | 15 | 1 |
+| TypeScript Topics | 15 | 3 (+1 🟡) |
 | JavaScript Runtime Concepts | 10 | 1 |
-| Software Design Patterns | 7 | 0 (1 🟡) |
+| Software Design Patterns | 7 | 1 (+1 🟡) |
 | System Design Concepts | 6 | 0 |
-| **Total** | **38** | **2** (+1 in progress) |
+| **Total** | **38** | **5** (+2 in progress) |

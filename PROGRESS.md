@@ -3,7 +3,7 @@
 > Har week ke baad yeh update hoga. Naya session shuru karte waqt **yeh sabse pehle padho**,
 > phir [`ROADMAP.md`](ROADMAP.md), phir [`COVERAGE.md`](COVERAGE.md).
 
-**Status:** 🟢 Week 1 (core store engine) done — Week 2 (`combineReducers`) next.
+**Status:** 🟢 Week 2 (`combineReducers`) done — Week 3 (middleware) next.
 
 ---
 
@@ -23,8 +23,8 @@
 | Week | Module | Status | Notes |
 |---|---|---|---|
 | 1 | Core store engine | ✅ done | closures, generics, copy-on-write (`nextListeners`) fix verified |
-| 2 | combineReducers | ⬜ next | |
-| 3 | Middleware system | ⬜ locked | |
+| 2 | combineReducers | ✅ done | `keyof`, Mapped Types; hit + fixed a real TS limitation (union-key write → `never`) |
+| 3 | Middleware system | ⬜ next | |
 | 4 | Enhancers + DevTools bridge | ⬜ locked | |
 | 5 | React bindings | ⬜ locked | |
 | 6 | createSlice (Proxy-based) | ⬜ locked | |

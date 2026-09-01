@@ -52,14 +52,32 @@ function createStore<State, Action>(
 export default createStore
 
 // --- quick manual test ---
-type CounterAction = { type: 'increment' }
 
-const reducer: Reducer<number, CounterAction> = (state = 0, action) => {
-  if (action.type === 'increment') return state + 1
-  return state
+// --- actions (discriminated union) ---
+type CounterAction = { type: 'counter/increment' }
+type ThemeAction = { type: 'theme/toggle' }
+type AppAction = CounterAction | ThemeAction
+
+// --- counter slice ---
+const counterReducer: Reducer<number, AppAction> = (state = 0, action) => {
+  // TODO 1: agar action.type === 'counter/increment' hai, state+1 return karo
+  // TODO 2: WARNA (yeh 'meri slip nahi hai' wala case), state jaisa hai waisa hi return karo
+  switch (action.type) {
+    case 'counter/increment':
+      return state + 1
+    default:
+      return state
+  } 
 }
 
-const store = createStore(reducer, 0)
-console.log(store.getState())
-store.dispatch({ type: 'increment' })
-console.log(store.getState())
+// --- theme slice ---
+const themeReducer: Reducer<'light' | 'dark', AppAction> = (state = 'light', action) => {
+  // TODO 3: agar action.type === 'theme/toggle' hai — state 'light' hai to 'dark' karo, 'dark' hai to 'light'
+  // TODO 4: WARNA, state jaisa hai waisa hi return karo
+    switch (action.type) {
+      case 'theme/toggle':
+        return state === 'light' ? 'dark' : 'light'
+      default:
+        return state
+    }
+}
